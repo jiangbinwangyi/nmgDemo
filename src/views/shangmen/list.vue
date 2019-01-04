@@ -7,6 +7,8 @@
 		<Modal
 	        v-model="modal1"
 	        @on-ok="ok"
+	        ok-text="通过"
+	        cancel-text="不通过"
 	        @on-cancel="cancel">
 	        <p style="text-align: center; font-size: 18px;">是否确认审核通过</p>
 	    </Modal>
@@ -184,7 +186,7 @@ import top from '@/components/pz_top'
         },
         methods:{
         	ok(){
-        		this.data1[0].address = '已接单';
+        		this.data1[0].address = '已审核';
         	},
         	cancel(){
         		this.modal = false;
@@ -194,5 +196,4 @@ import top from '@/components/pz_top'
 </script>
 
 <style>
-	
 </style>
