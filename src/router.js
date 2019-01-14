@@ -25,6 +25,20 @@ export default new Router({
       }]
     },
     {
+      path: '/intelligent',
+      name: 'intelligent',
+      component: Main,
+      children:[{
+      	path: 'drug',
+      	name: 'drug',
+      	component: () => import('@/views/iframe2.vue')
+      },{
+      	path: 'diagnosis',
+      	name: 'diagnosis',
+      	component: () => import('@/views/iframe2.vue')
+      }]
+    },
+    {
       path: '/order',
       name: 'peizhen',
       component: Main,

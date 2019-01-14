@@ -42,31 +42,31 @@
 				},
 				userArea: [{
 						"name": "南京市",
-						"value": 1435
+						"value": 9435
 					},
 					{
 						"name": "徐州市",
-						"value": 256
+						"value": 4256
 					},
 					{
 						"name": "连云港市",
-						"value": 332
+						"value": 4332
 					},
 					{
 						"name": "苏州市",
-						"value": 232
+						"value": 8532
 					},
 					{
 						"name": "无锡市",
-						"value": 5423
+						"value": 7423
 					},
 					{
 						"name": "常州市",
-						"value": 9765
+						"value": 7765
 					},
 					{
 						"name": "淮安市",
-						"value": 5433
+						"value": 2433
 					},
 					{
 						"name": "盐城市",
@@ -74,7 +74,7 @@
 					},
 					{
 						"name": "南通市",
-						"value": 631
+						"value": 2631
 					},
 					{
 						"name": "镇江市",
@@ -82,21 +82,25 @@
 					},
 					{
 						"name": "扬州市",
-						"value": 556
+						"value": 6556
 					},
 					{
 						"name": "宿迁市",
-						"value": 2332
+						"value": 1332
 					},
 					{
 						"name": "泰州市",
-						"value": 332
+						"value": 5332
 					}
 				],
 			}
 		},
 		mounted() {
 			let barOptions = {
+				title:{
+					left: 'left',
+					text: '用户性别比例'
+				},
 				tooltip: {
 					trigger: 'item',
 				},
@@ -133,7 +137,7 @@
 				}],
 				xAxis: [{
 					type: 'value',
-					max: 50000,
+					max: 10000,
 					min: 0
 				}],
 				series: [{
@@ -159,24 +163,31 @@
 					}
 				},
 				visualMap: {
-					min: 0,
-					max: 5000,
+					min: 1000,
+					max: 10000,
 					calculable: true,
 					bottom: 20,
 					textStyle: {
 						color: '#fff'
-					}
+					},
+					inRange: {
+		                color: ['lightskyblue','yellow','orangered']
+		            }
 				},
 				series: {
 					name: '地域分布',
 					type: 'map',
 					mapType: 'jiangsu',
 					data: this.userArea,
+					itemStyle:{
+	                    normal:{label:{show:true,fontSize:'12px'}},
+	                    emphasis:{label:{show:true}}
+	                },
 					top: 0,
 					bottom: 0
 				}
 			}
-			let userArea = echarts.init(document.getElementById('userArea'),'light')
+			let userArea = echarts.init(document.getElementById('userArea'))
 			userArea.setOption(mapOption);
 		}
 	}

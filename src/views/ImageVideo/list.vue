@@ -100,16 +100,16 @@
 	        		<div class="jg_left">
 	        			<strong><Icon type="md-person-add" /> 接入方</strong>
 	        			<ul>
-	        				<li title="视频已接入"><Avatar>放射</Avatar> 放射一科 <img :src="vc" style="vertical-align: middle;" width="16px" /></li>
-	        				<li title="视频已接入"><Avatar>心外</Avatar> 心胸外科 <img :src="vc" style="vertical-align: middle;" width="16px"/></li>
-	        				<li title="视频已接入"><Avatar>B超</Avatar> B超室 <img :src="vc" style="vertical-align: middle;" width="16px" /></li>
-	        				<!--<li><Avatar>外科</Avatar> 脑外科</li>
-	        				<li><Avatar>心脑</Avatar> 心脑外科</li>
-	        				<li><Avatar>检验</Avatar> 检验一科</li>-->
+	        				<!--<li title="视频已接入"><Avatar>放射</Avatar> 放射一科 <img src="@/assets/vc.png" style="vertical-align: middle;" width="16px" /></li>-->
+	        				<!--<li title="视频已接入"><Avatar>心外</Avatar> 心胸外科 <img src="@/assets/vc.png" style="vertical-align: middle;" width="16px"/></li>-->
+	        				<!--<li title="视频已接入"><Avatar>B超</Avatar> B超室 <img src="@/assets/vc.png" style="vertical-align: middle;" width="16px" /></li>-->
+	        				<li title="视频已接入">放射一科 <img src="@/assets/vc.png" style="vertical-align: middle;" width="16px" /></li>
+	        				<li title="视频已接入">心胸外科 <img src="@/assets/vc.png" style="vertical-align: middle;" width="16px" /></li>
+	        				<li title="视频已接入">B超室 <img src="@/assets/vc.png" style="vertical-align: middle;" width="16px" /></li>
 	        			</ul>
 	        		</div>
 	        		<div class="jg_center">
-	        			<img src="@/assets/ct.png" alt="" />
+	        			<img :src="ct" alt="" />
 	        		</div>
 	        		<div class="jg_right">
 	        			<Button>影像诊断</Button>
@@ -141,13 +141,15 @@
 	import two from '@/assets/iv1.jpg'
 	import zhenduan from '@/assets/ct2.png'
 	import top from '@/components/iv_top'
-	import vc from '@/assets/vc.svg'
+	import vc from '@/assets/vc.png'
+	import ct from '@/assets/ct.png'
     export default {
         data () {
             return {
             	ivTitle: 'iv',
             	pay: '',
             	vc,
+            	ct,
 	            formItem:{
 	            	textarea: '',
 	            	date: '',
@@ -379,9 +381,7 @@
         components:{
         	top,
         },
-        mounted(){
-        	console.dir(this.vc);
-        },
+        mounted(){},
         methods: {
         	upTitle(e){
         		this.ivTitle = e;
@@ -407,7 +407,7 @@
         			this.modal2Text="付款"
         		}else if(this.modal2Text=="付款"){
         			this.modal2Text="确认";
-        			this.$Message.success('付款成功。查看诊断结果')
+//      			this.$Message.success('付款成功。查看诊断结果')
         		}else{
         			this.modal2Text="下一步";
         			this.modal2=false;

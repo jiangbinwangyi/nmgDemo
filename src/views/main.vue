@@ -64,7 +64,7 @@
 				                        互联网医疗增值服务
 	                    </template>
 			            <MenuItem name="2-1" to="/video/list/?t=hz">
-			                <Icon type="md-contacts" />多学科会诊
+			                <Icon type="md-contacts" />疑难杂症多学科会诊
 			            </MenuItem>
 			            <Submenu name="2-2">
 			           		 <template slot="title">
@@ -73,7 +73,7 @@
 		                    <MenuItem name="2-2-1" to="/iframe/view?u=visit">
 				                上门护理APP
 				            </MenuItem>
-				            <MenuItem name="2-2-2" to="/visit/list/">
+				            <MenuItem name="2-2-2" to="/visit/chart/">
 				                运营管理
 				            </MenuItem>
 		                </Submenu>
@@ -84,14 +84,14 @@
 		                    <MenuItem name="2-3-1" to="/iframe/view?u=order">
 				                	护士陪诊APP
 				            </MenuItem>
-				            <MenuItem name="2-3-2" to="/order/list/">
+				            <MenuItem name="2-3-2" to="/order/chart/">
 				                运营管理
 				            </MenuItem>
 		                </Submenu> 
-			            <MenuItem name="2-4">
+			            <MenuItem name="2-4" to="/intelligent/drug">
 			                <Icon type="ios-briefcase-outline" />药品配送
 			            </MenuItem>
-			            <MenuItem name="2-5">
+			            <MenuItem name="2-5" to="/intelligent/diagnosis">
 			               <Icon type="md-clipboard" />智能诊断
 			            </MenuItem>
 		            </Submenu>

@@ -1,7 +1,7 @@
 <template>
 	<div class="iv_top">
 		<!--<img :src="logo" alt="" />-->
-		<strong v-text="title+'（长治市区域医疗协同平台）'"></strong>
+		<strong v-text="title"></strong>
 	</div>
 </template>
 
@@ -26,9 +26,9 @@ import logo from '@/assets/yinggu-logo.png'
 		methods:{
 			zurl(t){
 				if(t == "iv"){
-					this.title= "远程影像诊断医生工作站";
+					this.title= "远程影像诊断医生工作站（长治市人民医院远程影像诊断中心）";
 				}else if(t=='hz'){
-					this.title= "远程会诊";
+					this.title= "长治市疑难杂症多学科会诊平台";
 				}else if(t=='bl'){
 					this.title= "远程病理";
 				}else{

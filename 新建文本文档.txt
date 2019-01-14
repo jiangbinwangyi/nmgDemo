@@ -1,0 +1,8 @@
+1. 远程影像诊断医生工作站  /video/list/?t=iv
+2. 远程影像中心运营管理  /video/chart
+3. 疑难杂症多学科会诊  /video/list/?t=hz
+4. 上门护理服务运营管理-运营分析  /visit/chart/
+5. 上门护理服务运营管理-订单列表  /visit/chart/
+6. 护士陪诊服务运营管理-运营分析 /order/chart/
+7. 护士陪诊服务运营管理-订单列表 /order/chart/
+8. 预约挂号运营管理-用户数据  #/gh/user

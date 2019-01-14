@@ -30,7 +30,7 @@
 		data(){
 			return {
 				model1: '',
-				value,
+				value: '',
 			}
 		},
 		props: {

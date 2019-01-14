@@ -3,15 +3,15 @@
 		<Menu mode="horizontal" theme="light" :active-name="theType">
 			<!--<img :src="logo" alt="" height="40px" />-->
 			<strong style="float: left; padding: 0 15px 0;font-size: 18px;" v-text="title"></strong>
-			<MenuItem name="list" :to="'/'+theUrl+'/list/'">
-	            <Icon type="ios-paper" />订单列表
-	        </MenuItem>
 	        <MenuItem name="chart" :to="'/'+theUrl+'/chart/'">
 	            <Icon type="ios-analytics" />运营分析
 	        </MenuItem>
+			<MenuItem name="list" :to="'/'+theUrl+'/list/'">
+	            <Icon type="ios-paper" />订单列表
+	        </MenuItem>
         </Menu>
         
-        <div class="pz_form" v-show="theType==list">
+        <div class="pz_form" v-show="theType=='list'">
         	<Row>
         		<i-col span="10" style="font-size: 16px;">订单列表</i-col>
         		<i-col span="5">

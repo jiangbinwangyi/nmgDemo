@@ -177,10 +177,12 @@
 			smMoney.setOption(lineOption);
 			
 			window.addEventListener('resize', function() {
-				servePerson.resize();
-				serveTime.resize();
-				serveNum.resize();
-				serveState.resize();
+				smSex.resize();
+				smMoney.resize();
+				smOrder.resize();
+				smHuanzhe.resize();
+				smHushi.resize();
+				smTaocan.resize();
 			})
 		 }
 	}

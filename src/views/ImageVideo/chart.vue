@@ -1,6 +1,6 @@
 <template>
 	<div class="xdChart">
-		<top title="远程影像中心运营管理（长治市区域医疗协同平台）"></top>
+		<top title="远程影像中心运营管理（长治市人民医院远程影像诊断中心）"></top>
 		<Row>
 			<i-col span='12'>
 				<div id="serveNum" style="height: 100%; width: 100%;"></div>
@@ -29,8 +29,8 @@
 		data(){
 			return {
 				person: [
-					{"name":"男","value": 2432},
-					{"name":"女","value": 1989}
+					{"name":"男","value": 2132},
+					{"name":"女","value": 2789}
 				],
 				doctorTitle: {
 					xAxis: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
@@ -42,7 +42,7 @@
 				},
 				serveTime: {
 					xAxis: ['0-3min','3-5min','5-10min','10-15min','15-20min','20-30min','30min以上'],
-					data: [23,546,345,209,113,45,3]
+					data: [13,306,325,419,173,45,3]
 				},
 			}
 		},
@@ -121,9 +121,9 @@
 			serveTime.setOption(barOption);
 			
 			window.addEventListener('resize', function() {
+				serveNum.resize();
 				servePerson.resize();
 				serveTime.resize();
-				serveNum.resize();
 				serveState.resize();
 			})
 		 }
